@@ -17,7 +17,7 @@ function AnimeCardsSkeleton() {
       }}
     >
       <Swiper
-        slidesPerView={7}
+        slidesPerView={8}
         spaceBetween={35}
         scrollbar={{
           hide: true,
@@ -27,20 +27,24 @@ function AnimeCardsSkeleton() {
             slidesPerView: 3,
             spaceBetween: 15,
           },
-          "@0.75": {
-            slidesPerView: 3,
+          "@0.9": {
+            slidesPerView: 4,
             spaceBetween: 20,
           },
-          "@1.00": {
-            slidesPerView: 4,
-            spaceBetween: 35,
-          },
-          "@1.30": {
+          "@1.20": {
             slidesPerView: 5,
             spaceBetween: 35,
           },
-          "@1.50": {
+          "@1.40": {
+            slidesPerView: 6,
+            spaceBetween: 35,
+          },
+          "@1.60": {
             slidesPerView: 7,
+            spaceBetween: 35,
+          },
+          "@1.75": {
+            slidesPerView: 8,
             spaceBetween: 35,
           },
         }}
@@ -48,7 +52,7 @@ function AnimeCardsSkeleton() {
         className="mySwiper"
       >
         {[...Array(8)].map((x, i) => (
-          <SwiperSlide>
+          <SwiperSlide key={i}>
             <Skeleton
               width={
                 width <= 600 ? (width <= 400 ? "100px" : "120px") : "160px"
@@ -57,13 +61,13 @@ function AnimeCardsSkeleton() {
                 width <= 600 ? (width <= 400 ? "160px" : "180px") : "235px"
               }
               borderRadius={"0.5rem"}
-              baseColor={"#808080"}
-              highlightColor={"#404040"}
+              baseColor={"#303436"}
+              highlightColor={"#202225"}
             />
             <Skeleton
               width={width <= 600 ? "120px" : "160px"}
-              baseColor={"#808080"}
-              highlightColor={"#404040"}
+              baseColor={"#303436"}
+              highlightColor={"#202225"}
               count={2}
               style={{
                 marginTop: "1rem",
